@@ -7,9 +7,9 @@
 /*ROOT COLORS FOR WEBSITE*/
 :root {
     /*Changeable basecolors*/
-    --base-color: #424242; /*Darker BaseColor*/
+    --base-color: #373737; /*Darker BaseColor*/
     --base-contrast:#dbdbdb; /*Constrasting color */
-    --strong-color: #d69443; /*Bright attentionGrabbing color*/
+    --strong-color: #d3872a; /*Bright attentionGrabbing color*/
     
     --bg-color: var(--base-color);
     --t-color: var(--base-contrast);
