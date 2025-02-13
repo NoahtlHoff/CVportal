@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*ROOT COLORS FOR WEBSITE*/
+:root {
+    /*Changeable basecolors*/
+    --base-color: #424242; /*Darker BaseColor*/
+    --base-contrast:#dbdbdb; /*Constrasting color */
+    --strong-color: #d69443; /*Bright attentionGrabbing color*/
+    
+    --bg-color: var(--base-color);
+    --t-color: var(--base-contrast);
+
+    --button-color: var(--base-contrast);
+    --button-text: var(--base-color);
+
+    /* Shadows header from basecolor*/
+    --header-color: color-mix(in srgb, var(--bg-color) 70%, black 30%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--t-color);
+}
+
+header {
+    height: 5rem;
+    display: flex;
+    /* gap: 2em; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    justify-content: space-between; 
+    background-color: var(--header-color);
+    color: var(--t-color);
+    width: 100%;
+    box-sizing: border-box;
+    /* box-shadow: inset 0px 15px 10px -15px rgba(0, 0, 0, 0.521); */
+/* 
+    box-shadow: 
+    inset 0 -5px 5px rgba(0, 0, 0, 0.3),
+    inset -5px 0 5px rgba(0, 0, 0, 0.3), 
+    inset 5px 0 5px rgba(0, 0, 0, 0.3); */
+}
+
+/* Remove or override the previous fixed-height footer styles */
+footer {
+    background-color: var(--header-color);
+    color: var(--t-color);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+  
+  /* Container to hold the three footer sections */
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  /* Individual sections within the footer */
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--strong-color);
+  }
+  
+  .footer-section p {
+    line-height: 1.6;
+  }
+  
+  /* Styling for lists inside footer sections */
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section ul li a {
+    color: var(--t-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: var(--strong-color);
+  }
+  
+  /* Social icons layout */
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Footer bottom (copyright area) */
+  .footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--strong-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .read-more:hover {
+    color: var(--t-color);
+  }
+
+
+
+/* header > label.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+} */
+
+main {
+    min-height: 90vh;
+    display: flex;            
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+/* .logo {
+    width: 150px;
+    height: 100%;
+} */
+
+.header-left {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    /* width: 20em; */
+}
+
+.logo a {
+    display: block;
+    width: 8em;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--strong-color);
+    text-shadow: rgb(0, 0, 0) 0 0 1em;
+}
+
+.main-nav{
+    margin-left: auto;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    text-align: center;
+}
+
+.main-nav ul li a {
+    width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5rem;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--t-color);
+    font-size: 1em;
+    padding: 0 2em;
+}
+
+.main-nav ul li a:hover {
+    opacity: 0.8; 
+    box-shadow: none;
+}
+
+.main-nav ul li.active {
+    background-color: var(--bg-color);  
+  }
+
+/* TEXT COLOR ON ACTIVE PAGE */
+/* .main-nav ul li a.active{
+    color: var(--strong-color);
+} */
+
+.main-nav ul li a:active{
+    background-color: var(--strong-color);
+    color: var(--button-text);
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* .dropdown a{
+    margin: 2px;
+} */
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    
+    background-color: var(--header-color);
+    margin: 0;
+    padding: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    
+    list-style: none;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    /* box-shadow: 
+    inset 0 -5px 5px rgba(0, 0, 0, 0.3),
+    inset -5px 0 5px rgba(0, 0, 0, 0.3), 
+    inset 5px 0 5px rgba(0, 0, 0, 0.3); */
+  }
+
+.dropdown-menu li a {
+    display: block;
+    /* padding: 0.75rem; */
+}
+
+/* .dropdown-menu li a{
+    display: block;
+    white-space: nowrap;
+} */
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* @media (max-width: 1000px) {
+    header {
+      flex-direction: column;
+      height: auto; 
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+  
+    .header-left,
+    .main-nav {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+  
+    .main-nav {
+        display: flex;
+        height: auto;   
+        width: 100%;
+        align-items: center;
+
+    }
+    .main-nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+} */
+@media (max-width: 1000px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 350px;
+    }
+    
+    .header-left,
+    .main-nav {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .main-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-width: 350px;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        flex-wrap: nowrap; /* items stay in one row; allow wrapping if you prefer: use wrap */
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main-nav ul li {
+        display: flex;
+        flex: 1 1 0; /* share available space equally */
+        width: auto;
+        text-align: center;
+        min-width: 0;
+    }
+    
+    .main-nav ul li a {
+        width: 100%;
+        /* min-width: 0; */
+        padding: 0.5em 1em;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+  
+/*LIGHTMODE/DARKMODE*/
+.light-mode {
+    --bg-color: var(--base-contrast);
+    --t-color: var(--base-color);
+
+    /* Shadows header from basecolor*/
+    --header-color: color-mix(in srgb, var(--base-contrast) 70%, black 30%);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    /* margin-right: 1em; */
+    width: 50px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--base-contrast); /* Default slider background */
+    transition: 0.4s;
+    border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px; 
+  bottom: 3px;
+  background-color: var(--strong-color);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.switch input:checked + .slider {
+    background-color: var(--base-contrast); /* Slider color when "on" */
+}
+.switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
