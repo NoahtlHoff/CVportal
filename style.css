@@ -45,87 +45,108 @@ header {
     inset 5px 0 5px rgba(0, 0, 0, 0.3); */
 }
 
-/* Remove or override the previous fixed-height footer styles */
 footer {
-    background-color: var(--header-color);
+    background: var(--header-color);
     color: var(--t-color);
-    padding: 2rem 1rem;
-    font-size: 0.9rem;
+    padding: 1em;
+    font-size: 0.75em;
     box-sizing: border-box;
-  }
-  
-  /* Container to hold the three footer sections */
-  .footer-container {
+}
+
+.footer-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
-  }
-  
-  /* Individual sections within the footer */
-  .footer-section {
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.about {
     flex: 1;
-    min-width: 200px;
-  }
-  
-  .footer-section h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: var(--strong-color);
-  }
-  
-  .footer-section p {
-    line-height: 1.6;
-  }
-  
-  /* Styling for lists inside footer sections */
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer-section ul li a {
+    max-width: 40em;
+}
+
+.about h3 {
+    font-size: 1.5em;
+}
+
+
+.read-more {
     color: var(--t-color);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-section ul li a:hover {
-    color: var(--strong-color);
-  }
-  
-  /* Social icons layout */
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  /* Footer bottom (copyright area) */
-  .footer-bottom {
-    text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 1rem;
-  }
-  .read-more {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: var(--strong-color);
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .read-more:hover {
+}
+
+
+.contact-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-follow {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+.contact-me,
+.divider,
+.follow {
     color: var(--t-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover,
+.contact-me:hover{
+    color: var(--strong-color);
+}
+
+.divider {
+    margin: 0 0.5em;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.social li a {
+    color: var(--t-color);
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.social li a:hover {
+    color: var(--strong-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 0.3rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+}
+
+@media (max-width:600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
   }
+  .contact-social {
+    align-items: center;
+    text-align: center;
+  }
+  .about, .contact-social {
+    text-align: center;
+  }
+}
 
-
-
+  
 /* header > label.switch {
     display: flex;
     align-items: center;
@@ -198,7 +219,7 @@ main {
 }
 
 .main-nav ul li a:hover {
-    opacity: 0.8; 
+    color: var(--strong-color); 
     box-shadow: none;
 }
 
