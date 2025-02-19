@@ -11,6 +11,7 @@
 <body>
     <header>
         <div class="header-left">
+            
             <!-- LOGO -->
             <div class="logo">
                 <a href="../index.html">NOAH HOFF</a>
@@ -59,18 +60,35 @@
             </ul>
         </nav>
 
-      </header>
-      <main>
-        <section>
-            <h1>ABOUT STARTING PAGE, CHOOSE AN OPTION</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dignissimos. Delectus, accusamus soluta veniam nobis deleniti ducimus veritatis tempora maxime quis nostrum placeat consequatur libero culpa necessitatibus eum doloribus suscipit!</p>
-            <div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, earum eaque! Quidem repellat consectetur facere laboriosam commodi beatae maiores id magnam nulla, voluptate porro eum excepturi, voluptates nam. Totam, in?</p>
+    </header>
+    <main>
+        <h1>ABOUT</h1>
+        <section class="about">
+
+            <div class="card" onclick="window.location.href='cv.html';">
+                <h2>CV - Noah Hoff</h2>
+                <p>Noah Hoff CV, Work experiences and projects.</p>
+                <a href="../Docs/CV.pdf"onclick="event.stopPropagation();">Download as PDF</a>
             </div>
+
+            <div class="card" onclick="window.location.href='about-me.html';">
+              <h2>About Me</h2>
+              <p>Who is Noah Hoff? Hobbies & Personal Info</p>
+              
+              <a href="#"onclick="event.stopPropagation();">Download as PDF</a>
+          </div>
+          
+          <div class="card" onclick="window.location.href='website-doc.html';">
+              <h2>About Website</h2>
+              <p>An AI written documentation of how and why this website was created.</p>
+              <a href="../Docs/Website doc.pdf"onclick="event.stopPropagation();">Download the PDF</a>
+          </div>
+          <!-- Add more cards as needed -->
         </section>
+        
       </main>
-      <footer>
+    <footer>
         <p>this is a footer</p>
-      </footer>
+    </footer>
 </body>
 </html>

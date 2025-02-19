@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Noah Hoff</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../scripts.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="header-left">
@@ -22,7 +26,7 @@
                 <span class="slider round"></span>
             </label>
         </div>
-        
+
         <!-- NAVIGATION -->
         <nav class="main-nav">
             <ul>
@@ -30,10 +34,9 @@
                 <li>
                     <a href="../index.html">HOME</a>
                 </li>
-
                 <!-- PORTFOLIO DROPDOWN -->
                 <li class="dropdown">
-                    <a href="../projects/portfolio.html">PORTFOLIO <i class="fa-solid fa-chevron-down"></i></a>                   
+                    <a href="../projects/portfolio.html">PORTFOLIO <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="../projects/project1.html">PROJECT 1</a></li>
                         <li><a href="../projects/project2.html">PROJECT 2</a></li>
@@ -58,19 +61,45 @@
                 </li>
             </ul>
         </nav>
-
-      </header>
-      <main>
-        <section>
-            <h1>HERE IS MY CV</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, dignissimos. Delectus, accusamus soluta veniam nobis deleniti ducimus veritatis tempora maxime quis nostrum placeat consequatur libero culpa necessitatibus eum doloribus suscipit!</p>
-            <div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, earum eaque! Quidem repellat consectetur facere laboriosam commodi beatae maiores id magnam nulla, voluptate porro eum excepturi, voluptates nam. Totam, in?</p>
-            </div>
-        </section>
+    </header>
+    <main class="PDF-page">
+        <h1>CV - NOAH HOFF</h1>
+        <div class="pdf-container">
+          <object data="../Docs/CV.pdf#toolbar=0&navpanes=0&pagemode=none" type="application/pdf">
+            <p>Your browser does not support PDFs.
+              <a href="../Docs/CV.pdf">Download the PDF</a>
+            </p>
+          </object>
+        </div>
       </main>
-      <footer>
-        <p>this is a footer</p>
+    <footer>
+        <div class="footer-container">
+          <div class="about">
+            <h3>ABOUT ME</h3>
+            <p>
+              Welcome to my website! I'm Noah Hoff, a developer and designer passionate about modern web experiences.
+              I specialize in responsive design and intuitive digital solutions.
+              <a href="about-dropdown/about-me.html" class="read-more">READ MORE</a>
+            </p>
+          </div>
+          <div class="contact-social">
+            <div class="contact-follow">
+              <a href="contact.html" class="contact-me">CONTACT ME</a>
+              <span class="divider">//</span>
+              <span class="follow">FOLLOW ME:</span>
+            </div>
+            <ul class="social">
+              <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2025 Noah Hoff. All rights reserved.
+        </div>
       </footer>
 </body>
+
 </html>
