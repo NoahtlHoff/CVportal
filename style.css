@@ -374,7 +374,48 @@ main.contact form button:hover {
     transform: translateY(-5px);
 }
 
-
+/* Modal container */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* When the modal is targeted, make it visible */
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Modal content styling */
+  .modal-content {
+    background: var(--bg-color); /* uses your dark background; change to #fff for a lighter modal */
+    color: var(--t-color);
+    margin: 10% auto;
+    padding: 2rem;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Close button in modal */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--t-color);
+  }
+  
 
 .header-left {
     display: flex;
