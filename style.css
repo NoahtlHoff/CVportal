@@ -135,16 +135,6 @@ main.PDF-page h1 {
     color: var(--strong-color);
   }
   
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 600px) {
-    .Regular-Page {
-      padding: 1rem;
-    }
-    .Regular-Page h1 {
-      font-size: 2rem;
-    }
-  }
-  
 footer {
     background: var(--header-color);
     color: var(--t-color);
@@ -231,8 +221,14 @@ footer {
     margin-top: 0.5rem;
     font-size: 0.75rem;
 }
-
+  /* Responsive adjustments for smaller screens */
 @media (max-width:600px) {
+    .Regular-Page {
+        padding: 1rem;
+      }
+      .Regular-Page h1 {
+        font-size: 2rem;
+      }
     .footer-container {
         flex-direction: column;
         align-items: center;
