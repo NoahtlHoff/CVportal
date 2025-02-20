@@ -249,14 +249,6 @@ footer {
     }
 }
 
-
-/* header > label.switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-} */
-
 /* Base style for main container on all pages */
 main {
     min-height: 90vh;
@@ -281,8 +273,6 @@ main.home {
     text-align: center;
 }
 
-/* Contact page styles */
-/* Contact form styling */
 main.contact form {
     display: flex;
     flex-direction: column;
@@ -320,11 +310,9 @@ main.contact form button {
 }
 
 main.contact form button:hover {
-    background-color: #b26a1f; /* a slightly darker shade */
+    opacity: 80%; 
 }
 
-
-/* Portfolio page using a grid for cards */
 .portfolio{
     text-align: center;
     display: grid;
@@ -332,17 +320,7 @@ main.contact form button:hover {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
   }
-
-.about{
-    text-align: center;
-    display: grid;
-    margin: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-
-    gap: 2rem;
-  }
-
-
+/* EASTER EGG POPUP */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -371,6 +349,7 @@ main.contact form button:hover {
   cursor: pointer;
 }
 
+/* CSS POPUPS */
 .popup, .elite-popup {
     position: fixed;
     padding: 15px;
@@ -403,6 +382,7 @@ main.contact form button:hover {
     transition: color .3s;
     font-size: 2em;
     line-height: 1.5;
+    text-decoration: none;
 }
 
 .close-popup {
@@ -444,9 +424,9 @@ main.contact form button:hover {
 }
 
 .card img {
-    display: block; /* Makes the image a block element */
-    width: 100%;    /* Fills the container's width */
-    height: auto;   /* Maintains aspect ratio */
+    display: block; 
+    width: 100%;
+    height: auto;
   }
   .card a {
   display: block;
@@ -461,34 +441,7 @@ main.contact form button:hover {
 }
 .card:hover {
     transform: translateY(-5px);
-}
-
-/* Modal container */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-  }
-  
-  .modal:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: var(--t-color);
-  }
-  
+} 
 
 .header-left {
     display: flex;
@@ -614,7 +567,6 @@ main.contact form button:hover {
     .main-nav ul {
         display: flex;
         flex-wrap: nowrap;
-        /* items stay in one row; allow wrapping if you prefer: use wrap */
         width: 100%;
         min-width: 0;
         margin: 0;
@@ -624,7 +576,6 @@ main.contact form button:hover {
     .main-nav ul li {
         display: flex;
         flex: 1 1 0;
-        /* share available space equally */
         width: auto;
         text-align: center;
         min-width: 0;
@@ -657,6 +608,8 @@ main.contact form button:hover {
     /* Shadows header from basecolor*/
     --header-color: color-mix(in srgb, var(--base-contrast) 70%, black 30%);
 }
+
+/* EASTEREGG COLOR CHANGE */
 .party-mode {
     --bg-color: pink;
     --t-color: lime;
@@ -668,7 +621,6 @@ main.contact form button:hover {
 .switch {
     position: relative;
     display: inline-block;
-    /* margin-right: 1em; */
     width: 50px;
     height: 24px;
 }
@@ -687,7 +639,6 @@ main.contact form button:hover {
     right: 0;
     bottom: 0;
     background-color: var(--base-contrast);
-    /* Default slider background */
     transition: 0.4s;
     border-radius: 24px;
 }
@@ -706,7 +657,6 @@ main.contact form button:hover {
 
 .switch input:checked+.slider {
     background-color: var(--base-contrast);
-    /* Slider color when "on" */
 }
 
 .switch input:checked+.slider:before {
