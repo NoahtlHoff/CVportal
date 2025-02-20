@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("theme", "dark");
     }
   });
+
   themeToggleCheckboxeaseregg.addEventListener("change", () => {
     if (themeToggleCheckboxeaseregg.checked) {
       document.body.classList.add("party-mode");
@@ -44,6 +45,29 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         // If already open (active), allow the link click to proceed normally.
       }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Add click event listeners to all cards
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function (event) {
+      // If the click originated on a download link, do nothing
+      if (event.target.closest('.download-link, .btn')) {
+        return;
+      }
+      const targetUrl = card.getAttribute('data-href');
+      if (targetUrl) {
+        window.location.href = targetUrl;
+      }
+    });
+  });
+
+  // Prevent click events on download links from bubbling up to the card
+  document.querySelectorAll('.download-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.stopPropagation();
     });
   });
 });
