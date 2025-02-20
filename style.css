@@ -634,7 +634,14 @@ main.contact form button:hover {
     /* Shadows header from basecolor*/
     --header-color: color-mix(in srgb, var(--base-contrast) 70%, black 30%);
 }
+.party-mode {
+    --bg-color: pink;
+    --t-color: lime;
 
+    --strong-color: blue;
+    /* Shadows header from basecolor*/
+    --header-color: color-mix(in srgb, var(--base-contrast) 70%, black 30%);
+}
 .switch {
     position: relative;
     display: inline-block;

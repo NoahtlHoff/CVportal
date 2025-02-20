@@ -7,6 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("light-mode");
     themeToggleCheckbox.checked = true;
   }
+  else if(savedTheme === "party") {
+    document.body.classList.add("party-mode");
+    themeToggleCheckbox.checked = true;
+  }
 
   themeToggleCheckbox.addEventListener("change", () => {
     if (themeToggleCheckbox.checked) {
@@ -17,7 +21,15 @@ window.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("theme", "dark");
     }
   });
-
+  themeToggleCheckboxeaseregg.addEventListener("change", () => {
+    if (themeToggleCheckboxeaseregg.checked) {
+      document.body.classList.add("party-mode");
+      localStorage.setItem("theme", "party");
+    } else {
+      document.body.classList.remove("party-mode");
+      localStorage.setItem("theme", "dark");
+    }
+  });
   // --- New Code: Clickable Dropdown for Mobile with Double-Click Behavior ---
   const dropdownLinks = document.querySelectorAll('.dropdown > a');
 
